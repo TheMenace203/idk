@@ -975,9 +975,18 @@ end
     local Tab = Window:NewTab("Player's Features")
     local PlayerSection = Tab:NewSection("The Player HUB")
     
-    PlayerSection:NewButton("Change Species", "", function()
+    PlayerSection:NewButton("Change Species (Female)", "", function()
         print("Clicked")
         local args = {[1] = {["EyeColor"] = "Blue",["Gender"] = "Female",["CharDisplayName"] = "NTM's Menace"}}
+        game:GetService("ReplicatedStorage").Events.SpawnAsCustom:FireServer(unpack(args))
+    
+     
+    end)
+    
+    
+    PlayerSection:NewButton("Change Species (Male)", "", function()
+        print("Clicked")
+        local args = {[1] = {["EyeColor"] = "Blue",["Gender"] = "Male",["CharDisplayName"] = "NTM's Menace"}}
         game:GetService("ReplicatedStorage").Events.SpawnAsCustom:FireServer(unpack(args))
     
      
