@@ -122,7 +122,7 @@ end)
 local Player = Window:NewTab("Farm")
 local PlayerSection = Player:NewSection("The Farm Coins Hub")
         
-PlayerSection:NewToggle("Toggle Auto Chest TP ", "Teleports you to all the chest ", function(state)
+PlayerSection:NewToggle("Auto Chest TP ", "Teleports you to all the chest ", function(state)
 if state then
                 
 game.StarterGui:SetCore("SendNotification", { 
@@ -339,7 +339,7 @@ else
             end
         end)
      
-    
+    PlayerSection:NewLabel("Chest Spawn every 20 mins in private servers")
     
     PlayerSection:NewButton("Redeem All Codes ", "", function()
             print("Clicked")
